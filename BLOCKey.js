@@ -20,7 +20,7 @@ function initQrCode(){
 
 async function createQR(isDarkMode){
     let moduleColor = isDarkMode? "#F25F5C": "#1B445F"
-    let ringColor =  isDarkMode? "#247BA0": "#509BCE"
+    let ringColor =  isDarkMode?  "#247BA0": "#509BCE"
     let centerColor = isDarkMode? "#FFEB99": "#397F78"
 
     let qr = $(`
@@ -33,8 +33,8 @@ async function createQR(isDarkMode){
         >
     `)
 
-    $('body').empty()
-    $('body').append(qr)
+    // $('#qr-container').empty()
+    $('#qr-container').append(qr)
     setTimeout(animateQrLoad, 1)
     
     setQrToUrlKey()
